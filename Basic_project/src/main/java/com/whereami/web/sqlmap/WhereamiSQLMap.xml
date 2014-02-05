@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.whereami.web.dao.whereamiDAO">
+	<select id="getLogin" parameterType="com.whereami.web.vo.WhereamiInfoVO" resultType="com.whereami.web.vo.WhereamiInfoVO">
+		SELECT Service_ID, PWD, nickname, Phone_Number, push_id, auth_yn
+		FROM nex_locofme_member
+		WHERE Service_ID = #{Service_ID}   
+	</select>
+</mapper>
+
+
+
